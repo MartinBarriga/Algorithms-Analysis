@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link type="text/css" rel="stylesheet" href="prism.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="materialize.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css"  media="screen,projection"/>
+    <title>Bacterias</title>
+    <style>
+      html{
+        padding-bottom: 80px;
+      }
+      #animacion{
+        max-width: 80vh;
+      }
+      .principal{
+        padding-left: 10px;
+      }
+      input{
+        max-width: 50%;
+      }
+      .celda{
+        background-color: #ffffff;
+        background-image: url("cristal.png");
+        background-size: cover;
+        float: left;
+        border-radius: 3px;
+        position: relative;
+      }
+      .text {
+        position: absolute;
+        font-size: 240%;
+        top: 0;
+        left: 0;
+      }
+      .codigo{
+        float: right;
+      }
+      .linea{
+        font-family: Consolas;
+      }
+      input[type=number]:focus {
+         border-bottom: 1px solid #2196f3 !important;
+       }
+       .card{
+         padding: 10px;
+       }
+       .gradiente{
+        background: #2980B9;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+       }
+       .titulo{
+          font-size: 3.2rem;
+          font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+
+          text-align: center;
+          font-style: bold;
+
+            color: #ffffff;
+            padding: 3px;
+       }
+       .cuerpo{
+          font-size: 1.2rem;
+          font-family: chalkboard;
+          color: #00416A;
+          text-align: center;
+       }
+
+       .enfoques{
+background: rgb(48,137,157);
+background: -moz-radial-gradient(circle, rgba(48,137,157,1) 0%, rgba(84,94,222,1) 100%);
+background: -webkit-radial-gradient(circle, rgba(48,137,157,1) 0%, rgba(84,94,222,1) 100%);
+background: radial-gradient(circle, rgba(48,137,157,1) 0%, rgba(84,94,222,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#30899d",endColorstr="#545ede",GradientType=1);
+       }
+       .optimo
+       {
+       	color:#2E1F93;
+
+       }
+
+    </style>
+</head>
+<body>
+
+  <div class="gradiente">
+
+    <nav>
+      <div class="nav-wrapper light-blue">
+        <div class="titulo">PROGRAMACIÓN DINÁMICA</div>
+      </div>
+    </nav>
+
+    <br></br>
+
+
+    <div class="principal">
+
+
+    <div class="card-deck ">
+      <div class="card text-white bg-info mb-3">
+        <img src="TorresHanoi.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">¿De dónde proviene?</h5>
+          <p class="card-text">La idea de la programación dinámica proviene de darse cuenta que cuando trabajamos con tecnicas de programación recursivas, al tener una cantidad de problemas muy grande, las soluciones parciales de esos problemas se solapan.</p>
+        </div>
+      </div>
+      <div class="card text-white bg-info mb-3">
+        <div align="center">
+          <img src="Calculadora.png" alt="..." height="160px" width="160px" style="align-items: center;">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">¿Para qué sirve?</h5>
+          <p class="card-text">El objetivo de la programación dinámica es el de poder evitar que calculos que ya hicieron en algún momento durante la ejecución de nuestro algoritmo, se vuelvan a calcular, logrando así, que nuestro algoritmo sea más eficiente y rápido.</p>
+        </div>
+      </div>
+      <div class="card text-white bg-info mb-3">
+        <div align="center">
+          <img src="Disquet.png" alt="..." height="150px" width="150px">
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">¿Cómo funciona?</h5>
+          <p class="card-text">La programación dinamica se auxilia de estructuras de datos en las cuales iremos guardando valores de los calculos que se hacen en nuestro algoritmo, para de esta manera, los podamos recuperar para formar otra solución en caso de que sea necesario buscando cumplir el <strong> principio de Optimalidad</strong></p>
+        </div>
+      </div>
+    </div>
+
+
+    <br></br>
+
+<div align="center">
+  <div class="bg-white text-info w-75">
+  	<div class="card-header text-center">
+    	<h2><strong>PRINCIPIO DE OPTIMALIDAD</strong></h2>
+  		</div>
+  		<img src="PulgarArriba.png" width="250px" height="250px" />
+  		<div class="card-body">
+  		<h4>Optimizar es buscar la mejor solución posible dentro de muchas posibles.</h4>
+  		<br>
+    	<p class="card-text"> 
+    		Si nosotros vamos tomando tomando desiciones optimas al momento de resolver subproblemas de un problema, podemos tener la confianza de que <strong>la combinación de las soluciones optimas de esos subproblemas, también será óptima</strong>
+    	<h3 class="text-center text-info alert alert-info"><strong>"En una secuencia de desiciones óptimas, toda subsecuencia ha de ser también óptima."</strong></h3>
+    	</p>
+  		</div>
+	</div>
+</div>
+
+</br>
+</br>
+
+
+    <div align="center">
+    <div class="enfoques card w-75 shadow-lg text-white"  >
+      <div class="card-body">
+        <h5 class="card-title">Enfoques de la programación dinámica</h5>
+        <p class="card-text">En la programación dinamica existen dos tipos de enfoques al momento de diseñar un algoritmo de este tipo, siendo los siguientes:</p>
+      </div>
+      <br></br><br></br>
+
+      <div class="row">
+      <div class="col">
+        <p><strong>Enfoque Top-Down</strong></p>
+        <a data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><img src="FlechaAbajo.png" alt="Enfoque TopDown" width="200px" height="200px"></img></a>
+        <div class="collapse multi-collapse" id="multiCollapseExample1">
+          <div class="card card-body text-dark">
+          El problema se divide en subproblemas, y estos se resuelven recordando las soluciones por si fueran necesarias nuevamente. Es una combinación de memoización y <strong>recursión</strong>.
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <p><strong>Enfoque Bottom-up</strong></p>
+        <a data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2"><img src="FlechaArriba.png" alt="Enfoque BottomUp" width="200px" height="200px"></img></a>
+        <div class="collapse multi-collapse" id="multiCollapseExample2">
+          <div class="card card-body text-dark">
+          Todos los problemas que puedan ser necesarios se resuelven de antemano y después se usan para resolver las soluciones a los problemas mayores. Este enfoque es ligeramente mejor en consumo de espacio y llamadas a funciones, pero a veces resulta poco intuitivo encontrar todos los subproblemas necesarios para resolver un problema dado.
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    </div>
+
+    <br></br>
+  </div>
+
+
+  <div align="center">
+  <nav class=" h-100 text-info navbar navbar-light bg-light">
+    <img class="mx-auto" src="frasco.png" height="90px" width="70px"></img><h1 class="mx-auto">Ejemplo: BACTERIAS</h1><img class="mx-auto" src="Bacteria.png" height="70px" width="70px"></img>
+  </nav>
+  </div>
+
+  <div align="center">
+  <div class="w-75 mt-4 alert alert-secondary text-justify" role="alert">
+  Un grupo de biologos computacionales acaban de diseñar un experimento para saber si una colonia de microbios es capáz de resolver problemas cuando se le estimula de ciertas formas. <br>
+  En este experimento <strong>se construye un recipiente de vidrio con una forma de cuadricula rectangular con M renglones y N columnas.</strong>
+  <br><br><strong>En cada cuadrito de la cuadricula se colocará cierta cantidad de un liquido químico</strong> que le es muy desagradable a los pobres microbios y que por esa misma razón, los microbios intentarán a toda costa evitarlo en lo más posible.<br><br>
+  El recipiente en el cual se coloca el compuesto, esta inclinado, lo que hace que <strong>la movilidad de los microbios se vea limitada a solo poder moverse hacia el este o hacia el sur, en otras palabras, hacia abajo de la cuadricula o hacia la derecha.</strong>
+  Claro que los microbios no pueden salir de la cuadricula, ¡la pared está muy alta!.
+  <br><br>
+  Al principio, <strong>la colonia de microbios se localiza en el primer cuadrito de la cuadricula</strong>, es decir, si hablaramos en un sistema de coordenadas, en la coordenada (1,1) y <strong>se espera que la colonia logre este desafío llegando al cuadrito correspondiente a la ultima columna y la ultima fila de la cuadricula</strong>, es decir, la coordenada (m,n).
+  <br><br>
+  Antes de empezar con este intenso experimento, <strong>los científicos desean calcular la cantidad de compuesto químico que la pobre colonia de microbios deberá soportar durante todo su trayecto por la cuadricula, esta será, la suma de todas las cantidades del compuesto químico que fueron depositados en cada uno de los cuadritos por los que los microbios tendrán que pasar.</strong>
+  <br><br>
+  <h5 class="text-center">¿Puedes ayudar a los científicos con este experimento?</h5><br><br>
+  
+  <div align="center">
+  <div class="w-75 alert alert-light text-left text-justify">
+    <h4>EJEMPLO</h4><br>
+    Supongamos que tenemos un recipiente en forma de cuadricula de dos filas y dos columnas, es decir M=2 y N=2, en el cual en cada cuadrito se colocarón las siguientes cantidades de compuesto químico:<br>
+    <div align="center">
+    <img src="CuadriculaEjemplo.png" width="170px" height="210px" />
+    </div>
+    Recordemos que empezamos de la casilla en la esquina superior izquierda, y queremos llegar a la casilla de la esquina inferior derecha <strong>solo moviendonos hacia la derecha e izquierda y pasando por la menor cantidad de compuesto químico.</strong><br><br>
+    Nos moveriamos pues, primero a la derecha, luego hacia abajo.<br>
+    <video src="BacteriasEjemplo.mp4" width="640" height="480" autoplay loop></video>
+    La suma de compuesto químico de las casillas por las que pasamos,esto es 8 + 1 + 8, siendo la suma <strong>17</strong>.<br><br>
+    <strong>Por lo tanto la menor cantidad de compuesto químico por la que tendrán que pasar las bacterias, será de 17.</strong>
+  </div>
+
+  </div>
+
+  </div>
+  </div>
+
+<br>
+
+<div align="center">
+    	<a class="btn btn-success" name="options" role="button" href="https://omegaup.com/arena/problem/mirBacterias#problems" target="_blank"> Ir al problema (OMEGAUP)</a>
+    	<a class="btn btn-success"data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Ver solución Top-down</a>
+    	 <a class="btn btn-success" data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">Ver solución Bottom-up</a>
+</div>
+
+ <br><br> <div align="center"><div class="alert alert-info"><h2>¡Veamos como funciona!</h2></div></div>
+
+
+
+
+    <div class="collapse" id="multiCollapseExample1">
+          <div class="card card-body">
+<pre class="line-numbers">
+<code class="language-cpp">
+#include &lt;iostream>
+#include &lt;math.h>
+#include &lt;vector>
+using namespace std;
+int mat[100][100];
+int m, n;
+vector &lt;int> arr(101,-1);
+vector &lt;vector &lt;int> > respuesta(101, arr);
+
+int camino(int i, int j){
+    if(respuesta[i][j]!= -1){
+        return respuesta[i][j];
+    }
+    else if(i==m || j == n) {
+        respuesta[i][j] = 90001;
+    }
+    else if( (i == m -1) && (j == n-1)){
+        respuesta[i][j] = mat[i][j];
+    }
+    else{
+        int a,b;
+        a = camino(i+1, j);
+        b = camino(i,j+1);
+        respuesta[i][j] = mat[i][j] + min(camino(i+1, j),camino(i,j+1));
+    }
+    return respuesta[i][j];
+}
+
+int main(){
+    int res;
+    cin >> m >> n;
+    for(int i = 0; i < m; i++){
+        for(int j =0; j <n; j++){
+            cin >> mat[i][j];
+        }
+    }
+    res = camino(0, 0);
+    cout << res << endl;
+    return 0;
+}
+          			
+</code>
+</pre>
+          </div>
+        </div>
+        <div class="collapse" id="multiCollapseExample2">
+          <div class="card card-body">
+<pre class="line-numbers language-cpp">
+<code>
+#include &lt;iostream>
+#include &lt;vector>
+using namespace std;
+vector &lt;int> arr(101, 90001);
+vector &lt;vector &lt;int> > mat(101, arr);
+int bacterias(int m, int n){
+    for(int i = m-1; i >=0; i--){
+        for(int j = n-1; j >=0; j--){
+            if(i != m-1 || j!= n-1) mat[i][j] += min(mat[i+1][j], mat[i][j+1]);  
+        }
+    }
+    return mat[0][0];
+}
+int main(){
+    int n, m;
+    cin >> m >> n;
+    for(int i = 0; i < m; i++){
+        for(int j = 0; j < n; j++){
+            cin >> mat[i][j];
+        }
+    }
+     cout << bacterias(m, n) << endl;
+   
+    return 0;
+}
+          			
+</code>
+</pre>
+          </div>
+       </div>
+
+
+
+  <div class="principal">
+  <br>
+  <script src="main.js" type="module"></script>
+    Numero de filas:<br> <input type="number" id="filas" value="" min="2" max="100"><br>
+    Numero de columnas:<br> <input type="number" class="input-field" id="columnas" value="" min="2" max="100"><br>
+    <button class="waves-effect waves-light blue btn" id="inicializar">Ingresar Datos</button>
+    <button class="waves-effect waves-light blue btn" id="play">Iniciar</button>
+    <h3 id="titulo"></h3>
+    <div class="contenido">
+    <div class="codigo card grey darken-1 white-text">
+      <div class="linea" id="linea1">
+        for(int i = m-1; i >=0; i--){
+      </div>
+      <div class="linea" id="linea2">
+        &emsp; for(int j = n-1; j >=0; j--){
+      </div>
+      <div class="linea" id="linea3">
+        &emsp;&emsp; if(i != m-1 || j!= n-1)
+      </div>
+      <div class="linea" id="linea4">
+         &emsp;&emsp;&emsp;&emsp;mat[i][j] += Math.min(mat[i+1][j], mat[i][j+1]);
+      </div>
+      <div class="linea">
+        &emsp;&emsp;}<br>
+        }
+      </div>
+      <div class="linea" id="linea5">
+        return mat[0][0];
+      </div>
+    </div>
+      <div id="animacion"></div>
+    </div>
+
+    </div>
+    </div>
+
+    <script src="Jquery.js"></script>
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    <script src="prism.js"></script>
+</body>
+</html>

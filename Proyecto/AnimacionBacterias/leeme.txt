@@ -1,0 +1,13 @@
+INFORMACION
+
+Abrir test.html en navegador FIREFOX
+
+Luego de ingresar número de filas y columnas, dar click en ingresar datos. Automáticamente comenzará la animación.
+
+Para volver a ver animación, refrescar la página
+
+Integrantes:
+
+Salinas Nuñez Jaime Alejandro
+Ramirez Vives José Manuel
+Barriga Vargas Martín Eduardo
